@@ -4,6 +4,12 @@ namespace Hse.IoC
 {
     public class AppServiceContainer : ServiceContainer
     {
-        public IServiceContainer Default { get; } = new AppServiceContainer();
+        public AppServiceContainer()
+        {
+            Register<ICommandBus, CommandBus>(new PerContainerLifetime());
+            Register<IAppBootstrapper, AppBootstrapper>(new PerContainerLifetime());
+        }
+
+        public static IServiceContainer Default { get; } = new AppServiceContainer();
     }
 }

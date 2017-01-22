@@ -34,16 +34,8 @@
       <HintPath>..\..\..\..\lib\Akka.1.1.2\lib\net45\Akka.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="DBHelpers, Version=1.1.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\..\..\lib\DBHelpers.1.1.0.0\lib\net45\DBHelpers.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
     <Reference Include="Even, Version=0.1.1.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\..\..\..\lib\Even.0.1.1\lib\net451\Even.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
-    <Reference Include="Even.Persistence.Sql, Version=0.1.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\..\..\lib\Even.Persistence.Sql.0.1.1\lib\net451\Even.Persistence.Sql.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="NewId, Version=3.0.0.0, Culture=neutral, PublicKeyToken=b8e0e9f2f1e657fa, processorArchitecture=MSIL">
@@ -68,6 +60,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Aggregates\Product.cs" />
+    <Compile Include="Aggregates\WareHouse.cs" />
     <Compile Include="Aggregates\Stock.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -76,6 +70,10 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\..\core\EvenStock.Server.Core.Contracts\EvenStock.Server.Core.Contracts.fsproj">
+      <Project>{59BE0679-4E58-4468-9D6B-5F995FA2C978}</Project>
+      <Name>EvenStock.Server.Core.Contracts</Name>
+    </ProjectReference>
     <ProjectReference Include="..\..\core\EvenStock.Server.Core.Domain\EvenStock.Server.Core.Domain.fsproj">
       <Project>{0FC06A12-1628-4D75-AF0D-4E1F4C052249}</Project>
       <Name>EvenStock.Server.Core.Domain</Name>
