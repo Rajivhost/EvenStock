@@ -3,8 +3,34 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
 VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{E9BB6ACB-B501-4119-9585-2184046073E9}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "server", "server", "{54213A7C-02DA-477C-9A01-58FEF3BC007B}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "core", "core", "{06FAAF7F-6722-4B9D-986D-023AE6238F77}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "infrastructure", "infrastructure", "{5E99B834-3242-49F6-BBC2-96967206686D}"
+EndProject
+Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "EvenStock.Server.Core", "server\core\EvenStock.Server.Core\EvenStock.Server.Core.xproj", "{89456A85-B4C5-4BC7-B594-D56A9BF4D784}"
+EndProject
 Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{89456A85-B4C5-4BC7-B594-D56A9BF4D784}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{89456A85-B4C5-4BC7-B594-D56A9BF4D784}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{89456A85-B4C5-4BC7-B594-D56A9BF4D784}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{89456A85-B4C5-4BC7-B594-D56A9BF4D784}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{54213A7C-02DA-477C-9A01-58FEF3BC007B} = {E9BB6ACB-B501-4119-9585-2184046073E9}
+		{06FAAF7F-6722-4B9D-986D-023AE6238F77} = {54213A7C-02DA-477C-9A01-58FEF3BC007B}
+		{5E99B834-3242-49F6-BBC2-96967206686D} = {54213A7C-02DA-477C-9A01-58FEF3BC007B}
+		{89456A85-B4C5-4BC7-B594-D56A9BF4D784} = {06FAAF7F-6722-4B9D-986D-023AE6238F77}
 	EndGlobalSection
 EndGlobal
