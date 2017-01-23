@@ -25,4 +25,4 @@ type WareHouseState =
             Id: WareHouseId;
             Name: WareHouseName
     }
-    with static member Empty = {Id = WareHouseId(Guid.Empty); Name = {Value = ""}}
+    with static member Empty = {Id = WareHouseId(Guid.Empty); Name = WareHouseName.Empty}

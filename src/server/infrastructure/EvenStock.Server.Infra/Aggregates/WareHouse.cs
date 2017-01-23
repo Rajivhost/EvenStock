@@ -1,6 +1,7 @@
 ﻿using Even;
 using Hse.Contracts.Commands;
 using Hse.Contracts.Events;
+using Hse.Domain.Reducers;
 using Hse.Domain.States;
 
 namespace Hse.Domain.Aggregates
@@ -16,7 +17,9 @@ namespace Hse.Domain.Aggregates
 
             OnEvent<WarehouseCreated>(@event =>
             {
-                
+                var previousState = State;
+
+                var newState = WareHouseReducers.Reduce(previousState, @event);
             });
         }
 

@@ -46,6 +46,14 @@
     <Compile Include="AssemblyInfo.fs" />
     <Compile Include="ValueObjects.fs" />
     <Compile Include="States.fs" />
+    <Compile Include="Reducers.fs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\EvenStock.Server.Core.Contracts\EvenStock.Server.Core.Contracts.fsproj">
+      <Name>EvenStock.Server.Core.Contracts</Name>
+      <Project>{59be0679-4e58-4468-9d6b-5f995fa2c978}</Project>
+      <Private>True</Private>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <MinimumVisualStudioVersion Condition="'$(MinimumVisualStudioVersion)' == ''">11</MinimumVisualStudioVersion>
